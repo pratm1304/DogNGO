@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog NGO - Adopt</title>
+    <link rel="stylesheet" href="styleadopt.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Dog NGO</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="search-section">
+    <div class="container">
+        <h2>Search for a Dog to Adopt</h2>
+        <form action="#" method="GET" id="searchForm" onsubmit="return onSubmit()">
+            <div class="form-group">
+                <label for="breed">Breed:</label>
+                <input type="text" id="breed" name="breed">
+            </div>
+            <div class="form-group">
+                <label for="age-range">Age Range:</label>
+                <input type="text" id="age-range" name="age-range">
+            </div>
+            <div class="form-group">
+                <label for="price-range">Price Range:</label>
+                <input type="text" id="price-range" name="price-range">
+            </div>
+            <div class="form-group">
+                <label for="nature">Nature:</label>
+                <select id="nature" name="nature">
+                    <option value="friendly">Friendly</option>
+                    <option value="active">Active</option>
+                    <option value="calm">Calm</option>
+                    <option value="protective">Protective</option>
+                    <option value="playful">Playful</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Search</button>
+            <p id="searchMessage" style="display: none; color: green;">Your search result will be sent to you via email.</p>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Dog NGO. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function onSubmit() {
+        document.getElementById('searchMessage').style.display = 'block';
+        setTimeout(function() {
+            location.reload();
+        }, 3000); // Refresh the page after 3 seconds (adjust as needed)
+        return false; // Prevent form submission
+    }
+</script>
+
+</body>
+</html>
